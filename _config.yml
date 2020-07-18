@@ -1,0 +1,23 @@
+# jekyll config
+
+# site
+title: '衡信科技 Headsuns'
+description: '衡信科技是一家专注网络技术的小微初创公司'
+keywords: '衡信,衡信科技,茂名衡信科技,茂名衡信科技有限公司,headsuns'
+url: 'https://headsuns.com/'
+
+
+# build
+permalink: '/:title/'
+exclude: [
+    'node_modules',
+    'package.json',
+    'Gruntfile.js',
+    'README.md'
+]
+
+
+# googleanalytics
+google_analytics:
+    id: 'UA-36924646-1'
+    domain: 'headsuns.com'

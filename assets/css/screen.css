@@ -1,0 +1,254 @@
+/*
+ * $Id$: screen.css;
+ * (c) 2020 Headsuns
+ */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+pre, a, code, em, img, dl, dt, dd, ol, ul, li, form, table, caption, th,
+td, canvas, embed, button {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%; /* 1rem=10px */
+	height: 100%;
+}
+body, input, textarea, td, button {
+	font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important;
+	font-size: 1.4rem; /* 1.4rem=14px */
+}
+code, pre {
+	font-size: 1.4rem; /* 1.4rem=14px */
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+a, a:link, a:visited, a:active {
+	color: #636a86;
+	text-decoration: none;
+}
+a:hover {
+	color: #636a86;
+	text-decoration: underline;
+}
+img {
+	vertical-align: middle;
+	line-height: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 0.5rem;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+
+.container {
+	min-width: 200px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.container:before, .container:after {
+	display: table;
+	content: "";
+}
+.container:after {
+	clear: both;
+}
+
+body {
+	background-color: #333;
+	background-image: url("/assets/img/bg.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: background-image 500ms;
+	color: #FFF;
+}
+body, #root, #app {
+	/* 必须保证高度100%，否则无法覆盖高度全屏 */
+	height: 100%;
+}
+#app {
+	position: relative;
+	z-index: 10;
+	/* 首页定制颜色 */
+	
+}
+
+.mask {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+.container {
+	max-width: 96rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header {
+	padding-top: 18rem;
+}
+.brand {
+	text-align: center;
+}
+.brand a {
+	font-size: 4rem;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#container {
+	min-height: 20rem;
+}
+.hero {
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 8rem 2rem 0;
+}
+.hero p {
+	text-align: center;
+	font-size: 3rem;
+	line-height: 150%;
+}
+
+.products {
+	padding-top: 6rem;
+}
+.products h2 {
+	padding: 2rem;
+	text-align: center;
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+.products .list {
+	display: flex;
+	justify-content: space-around;
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	padding: 3rem 2rem;
+}
+.product {
+	display: block;
+	width: 35rem;
+	text-decoration: none;
+	text-align: center;
+	color: #FFF;
+	padding: 2rem 3rem;
+	background: rgba(0, 0, 0, 0.28);
+	border-radius: 1rem;
+}
+.product:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+.product h3 {
+	display: inline-block;
+	font-size: 3.8rem;
+	line-height: 150%;
+	color: #FFF;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.product span {
+	display: inline-block;
+	font-size: 1.8rem;
+	color: #CFCFCF;
+}
+
+
+
+#footer {
+	/* 首页定制位置 */
+	position: absolute;
+	bottom: 2rem;
+	left: 0;
+	right: 0;
+	opacity: 0.6;
+	text-align: center;
+}
+.china {
+	margin-top: 0.5rem;
+}
+.china a {
+	text-decoration: none;
+	color: #CFCFCF;
+}
+
+.source {
+	position: absolute;
+	right: 2rem;
+	bottom: 2rem;
+	opacity: 0.6;
+}
+.source:before {
+	content: '#';
+	margin-right: 0.5rem;
+}
+.source a {
+	color: #DDD;
+}
+
+
+@media (max-width: 760px) {
+	html, body, #root, #app {
+		height: auto;
+	}
+	#header {
+		padding-top: 13rem;
+	}
+	.brand a {
+		font-size: 3.2rem;
+	}
+	#container {
+		margin-bottom: 45%;
+	}
+	.hero {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	.hero p {
+		font-size: 2rem;
+	}
+	.products h2 {
+		font-weight: normal;
+	}
+	.products .list {
+		display: block;
+		max-width: 100%;
+	}
+	.product {
+		margin: 0 auto 6%;
+		width: 100%;
+		max-width: 30rem;
+	}
+	.product h3 {
+		font-size: 3.2rem;
+		line-height: 110%;
+	}
+	#footer {
+		position: static;
+		margin-bottom: 2rem;
+	}
+	.source {
+		position: static;
+		margin: 2rem;
+		text-align: center;
+	}
+}
