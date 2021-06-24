@@ -1,23 +1,32 @@
-# jekyll config
+safe: false
+permalink: /:title
+exclude:
+  - 'README.md'
 
-# site
-title: '衡信科技 Headsuns'
-description: '衡信科技是一家专注网络技术的小微初创公司'
-keywords: '衡信,衡信科技,茂名衡信科技,茂名衡信科技有限公司,headsuns'
-url: 'https://headsuns.com/'
-
-
-# build
-permalink: '/:title/'
-exclude: [
-    'node_modules',
-    'package.json',
-    'Gruntfile.js',
-    'README.md'
-]
+name: 衡信科技 Headsuns
+desc: 衡信科技是一家专注网络技术的小微初创公司
+tags: 衡信, 衡信科技, 茂名衡信科技, 茂名衡信科技有限公司, headsuns
+link: https://headsuns.com/
 
 
-# googleanalytics
-google_analytics:
-    id: 'UA-36924646-1'
-    domain: 'headsuns.com'
+custom:
+  links:
+    - name: 衡信博客
+      link: https://blog.headsuns.com
+
+products:
+  keptab:
+    name: Keptab
+    link: https://keptab.com/
+    desc: 轻量且强大的浏览器标签页管理工具
+        
+meta:
+  author: 
+    name: Headsuns Inc
+    email: hi@headsuns.com
+    about: 衡信科技是一家专注网络技术的小微初创公司
+  
+  google:
+    gaId: UA-36924646-1
+    gaDomain: headsuns.com
+

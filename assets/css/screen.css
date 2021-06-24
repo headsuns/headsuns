@@ -135,7 +135,7 @@ body, #root, #app {
 	font-size: 2.4rem;
 	font-weight: bold;
 }
-.products .list {
+.products .product-list {
 	display: flex;
 	justify-content: space-around;
 	max-width: 80rem;
@@ -166,7 +166,7 @@ body, #root, #app {
 	word-break: break-all;
 	word-wrap: break-word;
 }
-.product span {
+.product p {
 	display: inline-block;
 	font-size: 1.8rem;
 	color: #CFCFCF;
@@ -229,7 +229,7 @@ body, #root, #app {
 	.products h2 {
 		font-weight: normal;
 	}
-	.products .list {
+	.products .product-list {
 		display: block;
 		max-width: 100%;
 	}

@@ -10,7 +10,7 @@ permalink: /
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 	<meta name="keywords"  content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
-	<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<title>{% if page.title %}{{ page.title }} - {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
 	<link rel="shortcut icon" href="{{ '/assets/img/favicon.ico' | prepend: site.baseurl }}">
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 	<link rel="stylesheet" href="{{ '/assets/css/screen.css' | prepend: site.baseurl }}">
@@ -33,22 +33,19 @@ permalink: /
 					</div>
 					<div class="products">
 						<h2>欢迎使用我们的产品</h2>
-						<div class="list">
-							<a class="product" href="https://www.instanotification.com">
-								<h3>instanotification</h3>
-								<span>基于微信的通知消息送达服务</span>
+						<div class="product-list">
+							<!-- keptab -->
+							<a class="product" href="{{ site.products.keptab.link }}" target="_blank" title="{{ site.products.keptab.desc }}">
+								<h3 class="product-name">{{ site.products.keptab.name }}</h3>
+								<p class="product-desc">{{ site.products.keptab.desc }}</p>
 							</a>
-							<!-- <a class="product" href="https://www.shuatizhushou.com">
-								<h3>刷题助手</h3>
-								<span>你身边的刷题神器</span>
-							</a> -->
 						</div>
 					</div>
 				</div>
 			</main>
 			<footer id="footer">
 				<div class="container">
-					<p class="rights" title="&copy; 2020 茂名衡信科技有限公司">&copy; 2020 衡信科技 Headsuns 版权所有 </p>
+					<p class="rights" title="&copy; 2021 茂名衡信科技有限公司">&copy; 2021 衡信科技 Headsuns 版权所有 </p>
 					<p class="china">
 						<a target="_blank" href="http://www.beian.miit.gov.cn" rel="nofollow" title="工信部备案">粤ICP备20038389号-1</a> 
 						<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44090202000463" rel="nofollow" title="公安机关备案">粤公网安备 44090202000463</a>
@@ -57,7 +54,11 @@ permalink: /
 			</footer>
 		</div>
 	</div>
-	<script id="js-config">{% if site.google_analytics %}var _gaId = '{{ site.google_analytics.id }}';var _gaDomain = '{{ site.google_analytics.domain }}';{% endif %}</script>
+	<script id="js-config">
+		window.products = {{ site.products | jsonify }}
+		window.gaId = '{{ site.meta.google.gaId }}'
+		window.gaDomain = '{{ site.meta.google.gaDomain }}'
+	</script>
 	<script id="js-main" src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
 </body>
 </html>
